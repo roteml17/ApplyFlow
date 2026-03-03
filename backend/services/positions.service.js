@@ -1,7 +1,6 @@
 const { randomUUID } = require("crypto");
 
 const ALLOWED_STATUSES = new Set([
-    "SAVED",
     "APPLIED",
     "HR",
     "TECH",
@@ -28,7 +27,7 @@ function createPosition(input) {
         throw err;
     }
 
-    const normalizedStatus = status ? String(status).toUpperCase() : "SAVED";
+    const normalizedStatus = status ? String(status).toUpperCase() : "APPLIED";
     if (!ALLOWED_STATUSES.has(normalizedStatus)) {
         const err = new Error(
             `status must be one of: ${Array.from(ALLOWED_STATUSES).join(", ")}`

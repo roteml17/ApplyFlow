@@ -1,19 +1,15 @@
 const positionsService = require("../services/positions.service");
+const asyncHandler = require("../utils/asyncHandler");
 
-function createPosition(req, res) {
-    try {
-        const created = positionsService.createPosition(req.body);
-        return res.status(201).json(created);
-    } catch (err) {
-        const status = err.statusCode || 500;
-        return res.status(status).json({ error: err.message || "Server error" });
-    }
-}
+const createPosition = asyncHandler(async (req, res) => {
+    const created = positionsService.createPosition(res.body);
+    res.status(201).json(created);
+});
 
-function getPositions(_req, res) {
+const getPositions = asyncHandler( async (req, res) => {
     const positions = positionsService.listPositions();
-    return res.json(positions);
-}
+    res.status(200).json(positions);
+});
 
 module.exports = {
     createPosition,

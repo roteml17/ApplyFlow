@@ -1,0 +1,153 @@
+/* ========= Base Reset ========= */
+
+* {
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+    background: #0f172a;
+    color: #f1f5f9;
+  }
+  
+  /* ========= Layout ========= */
+  
+  .page {
+    min-height: 100vh;
+    padding: 40px 16px;
+  }
+  
+  .container {
+    width: min(900px, 100%);
+    margin: 0 auto;
+  }
+  
+  /* ========= Header ========= */
+  
+  .page-title {
+    text-align: center;
+    font-size: 42px;
+    margin: 0;
+  }
+  
+  .page-subtitle {
+    text-align: center;
+    opacity: 0.7;
+    margin-top: 10px;
+  }
+  
+  /* ========= Card ========= */
+  
+  .card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    padding: 20px;
+    margin-top: 24px;
+  }
+  
+  /* ========= Table ========= */
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table th {
+    text-align: left;
+    font-size: 12px;
+    opacity: 0.7;
+    padding: 12px;
+  }
+  
+  .table td {
+    padding: 14px 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  
+  .table-row:hover {
+    background: rgba(255, 255, 255, 0.03);
+  }
+  
+  /* ========= Buttons ========= */
+  
+  .button {
+    padding: 12px 16px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
+  
+  .button-primary {
+    background: #3b82f6;
+    color: white;
+  }
+  
+  .button-primary:hover {
+    background: #2563eb;
+  }
+  
+  .button-secondary {
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+  }
+  
+  .button-secondary:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
+  
+  .button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  /* ========= Forms ========= */
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .input,
+  .select,
+  .textarea {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(0, 0, 0, 0.25);
+    color: white;
+    outline: none;
+  }
+  
+  .input:focus,
+  .select:focus,
+  .textarea:focus {
+    border-color: #3b82f6;
+  }
+  
+  .textarea {
+    resize: vertical;
+  }
+  
+  /* ========= Error ========= */
+  
+  .error-box {
+    padding: 12px;
+    border-radius: 10px;
+    background: rgba(255, 0, 0, 0.15);
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    margin-top: 10px;
+  }
+  
+  /* ========= Footer ========= */
+  
+  .footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+  }
