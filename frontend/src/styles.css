@@ -151,3 +151,102 @@
     justify-content: center;
     margin-top: 24px;
   }
+
+  /* ========= Ambient lights & page animations ========= */
+
+  .page-with-lights {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+
+  .page-ambient-lights {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .page-ambient-lights .orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.5;
+    animation: orb-float 20s ease-in-out infinite;
+  }
+
+  .page-ambient-lights .orb:nth-child(1) {
+    width: 320px;
+    height: 320px;
+    background: rgba(93, 135, 255, 0.6);
+    top: -80px;
+    left: -80px;
+    animation-delay: 0s;
+    animation-duration: 22s;
+  }
+
+  .page-ambient-lights .orb:nth-child(2) {
+    width: 280px;
+    height: 280px;
+    background: rgba(139, 92, 246, 0.5);
+    top: 40%;
+    right: -60px;
+    animation-delay: -5s;
+    animation-duration: 18s;
+  }
+
+  .page-ambient-lights .orb:nth-child(3) {
+    width: 240px;
+    height: 240px;
+    background: rgba(34, 211, 238, 0.4);
+    bottom: 10%;
+    left: 15%;
+    animation-delay: -10s;
+    animation-duration: 25s;
+  }
+
+  .page-ambient-lights .orb:nth-child(4) {
+    width: 200px;
+    height: 200px;
+    background: rgba(251, 146, 60, 0.35);
+    top: 60%;
+    right: 25%;
+    animation-delay: -7s;
+    animation-duration: 19s;
+  }
+
+  @keyframes orb-float {
+    0%, 100% {
+      transform: translate(0, 0) scale(1);
+      opacity: 0.5;
+    }
+    25% {
+      transform: translate(80px, -50px) scale(1.08);
+      opacity: 0.55;
+    }
+    50% {
+      transform: translate(-60px, 70px) scale(0.92);
+      opacity: 0.45;
+    }
+    75% {
+      transform: translate(50px, 40px) scale(1.04);
+      opacity: 0.52;
+    }
+  }
+
+  .page-content {
+    position: relative;
+    z-index: 1;
+    animation: page-fade-in 0.5s ease-out;
+  }
+
+  @keyframes page-fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

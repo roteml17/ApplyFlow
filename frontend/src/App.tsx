@@ -52,7 +52,14 @@ export default function App() {
   }
 
   return (
-    <Routes>
+    <div className="page-with-lights">
+      <div className="page-ambient-lights" aria-hidden="true">
+        <div className="orb" />
+        <div className="orb" />
+        <div className="orb" />
+        <div className="orb" />
+      </div>
+      <Routes>
       <Route
         path="/"
         element={
@@ -75,6 +82,7 @@ export default function App() {
         }
       />
       <Route path="*" element={<Navigate to="/" replace />} />
-    </Routes>
+      </Routes>
+    </div>
   );
 }

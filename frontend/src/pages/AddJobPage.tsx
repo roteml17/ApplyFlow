@@ -56,12 +56,13 @@ export default function AddJobPage({
   }
 
   return (
-    <div style={{ minHeight: "100vh", padding: "32px 16px" }}>
+    <div
+      className="page-content"
+      style={{ minHeight: "100vh", padding: "32px 16px" }}
+    >
       <header style={{ textAlign: "center", marginBottom: 24 }}>
         <h1 style={{ fontSize: 40, margin: 0 }}>Add a New Job</h1>
-        <p style={{ marginTop: 10, opacity: 0.8 }}>
-          Create a new job entry (saved via your backend).
-        </p>
+        <p style={{ marginTop: 10, opacity: 0.8 }}>Create a new job</p>
       </header>
 
       <main style={{ display: "grid", placeItems: "center" }}>

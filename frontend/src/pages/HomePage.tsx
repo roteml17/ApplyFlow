@@ -15,7 +15,10 @@ export default function HomePage({
   onAddClick,
 }: HomePageProps) {
   return (
-    <div style={{ minHeight: "100vh", padding: "32px 16px" }}>
+    <div
+      className="page-content"
+      style={{ minHeight: "100vh", padding: "32px 16px" }}
+    >
       {/* Header */}
       <header style={{ textAlign: "center", marginBottom: 24 }}>
         <h1 style={{ fontSize: 48, margin: 0 }}>Welcome to ApplyFlow</h1>
@@ -93,8 +96,9 @@ export default function HomePage({
                           textAlign: "center",
                         }}
                       >
-                        No jobs yet. Click “Add New Job” to create your first
-                        one.
+                        No jobs yet.
+                        <br />
+                        Click “Add New Job” to create your first one.
                       </td>
                     </tr>
                   ) : (
